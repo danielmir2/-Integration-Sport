@@ -1,0 +1,127 @@
+body{
+    margin: 0;
+    background-color: #393e50;
+    font-family: "Roboto", sans-serif, serif;
+    overflow: hidden;
+}
+
+img{
+    object-fit: cover;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    height: 240px;
+}
+
+
+.try-template{
+    color: white;
+    padding: 20px;
+    border: 1px solid white;
+}
+
+a{
+    text-decoration: none;
+}
+
+.try-template:hover{
+    background-color: #fcef57;
+    color: black;
+}
+
+.title{
+    color: white;
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    background-image: url("/images/landing-bg-pattern.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.landing-1, .landing-2{
+    width: 531px;
+
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 25px;
+    row-gap: 25px;
+    margin-right: 7%;
+    margin-left: 7%;
+    margin-bottom: 5%;
+}
+
+picture{
+    position: relative;
+    display: flex;
+    padding: 20px 47px;
+    border-radius: 4%;
+    margin-bottom: 30px;
+}
+
+picture img{
+    width: 166px;
+    top: -24px;
+    position: inherit;
+    margin-right: -30px;
+}
+
+picture img:hover{
+    transform: scale(1.1) translateY(-2em);
+}
+
+picture div{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-top: 5px;
+    width: 120px;
+}
+
+.numero{
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.sport{
+    color: white;
+    margin: 0;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#picture1{
+    background: linear-gradient(#3caf79, #bcd775);
+}
+
+#picture2{
+    background: linear-gradient(#92dbab, #68bfdd);
+}
+
+#picture3{
+    background: linear-gradient(#fcdd60, #f9927f);
+}
+
+#picture4{
+    background: linear-gradient(#3c4051, #6383b7);
+}
+
+#picture5{
+    background: linear-gradient(#f2a54a, #f6be78);
+}
+
+#picture6{
+    background: linear-gradient(#434abe, #58adcf);
+}
