@@ -1,127 +1,137 @@
 body{
     margin: 0;
-    background-color: #393e50;
-    font-family: "Roboto", sans-serif, serif;
-    overflow: hidden;
-}
-
-img{
-    object-fit: cover;
-}
-
-header{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-    height: 240px;
-}
-
-
-.try-template{
-    color: white;
-    padding: 20px;
-    border: 1px solid white;
+    font-family: Roboto, sans-serif;
 }
 
 a{
+    color: white;
     text-decoration: none;
 }
 
-.try-template:hover{
-    background-color: #fcef57;
-    color: black;
-}
-
-.title{
-    color: white;
-}
-
-main{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+header{
     position: relative;
-    background-image: url("/images/landing-bg-pattern.png");
-    background-position: bottom;
-    background-repeat: no-repeat;
+    height: 100vh;
+    background: url(../images/landing-bg-pattern.png) no-repeat bottom / contain #393E50;
+    /* background-size: contain; */
+    overflow: hidden;
+    text-transform: uppercase;
 }
 
-.landing-1, .landing-2{
-    width: 531px;
+.image-left{
+    position: absolute;
+    bottom: 0;
+    left: -20%;
+}
 
+.image-right{
+    position: absolute;
+    bottom: 0;
+    right: -20%;
+}
+
+.center-content{
+    width: 60%;
+    margin: auto;
+}
+
+.center-content nav{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.center-content nav p{
+    margin: 0;
+}
+
+.button{
+    border: 2px solid white;
+    padding: 20px;
+    border-radius: 3px;
+    transition: .5s;
 }
 
 .grid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 25px;
-    row-gap: 25px;
-    margin-right: 7%;
-    margin-left: 7%;
-    margin-bottom: 5%;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 15vh;
+    row-gap: 80px;
+    column-gap: 50px;
 }
 
-picture{
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
-    display: flex;
-    padding: 20px 47px;
-    border-radius: 4%;
-    margin-bottom: 30px;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 20px 0;
+}
+.content::before{
+    content: "";
+    position: absolute;
+    top: 30px;
+    bottom: -35px;
+    width: 100%;
+    z-index: -1;
+    border-radius: inherit;
+    transform: skewY(2.5deg);
+    transform-origin: 0 0;
+    transition: .3s;
 }
 
-picture img{
-    width: 166px;
-    top: -24px;
-    position: inherit;
-    margin-right: -30px;
+.element-1 .content::before{
+    background-image: linear-gradient(#35ad79, #f1e774);
+}
+.element-2 .content::before{
+    background-image: linear-gradient(#98dfa4, #54b2f4);
+}
+.element-3 .content::before{
+    background-image: linear-gradient(#fceb5a, #f8708d);
+}
+.element-4 .content::before{
+    background-image: linear-gradient(#516093, #698fc3);
+}
+.element-5 .content::before{
+    background-image: linear-gradient(#f2a346, #f8c88a);
+}
+.element-6 .content::before{
+    background-image: linear-gradient(#4141bc, #61d5d6);
 }
 
-picture img:hover{
-    transform: scale(1.1) translateY(-2em);
+.text{
+    padding: 10px;
 }
 
-picture div{
-    display: flex;
-    flex-direction: column;
-    margin-right: 20px;
-    margin-top: 5px;
-    width: 120px;
-}
-
-.numero{
-    color: white;
-    font-size: 80px;
+.counter{
+    font-size: 4rem;
     font-weight: bold;
+    color: rgba(255,255,255, .45);
 }
 
-.sport{
-    color: white;
+.text p{
     margin: 0;
-    font-weight: bold;
-    font-size: 24px;
 }
 
-#picture1{
-    background: linear-gradient(#3caf79, #bcd775);
+.image{
+    padding: 0 10px 10px;
+    transition: .3s;
 }
 
-#picture2{
-    background: linear-gradient(#92dbab, #68bfdd);
+.content:hover .image{
+    transform: scale(1.05) translateY(-10px);
 }
 
-#picture3{
-    background: linear-gradient(#fcdd60, #f9927f);
+.content:hover::before {
+    transform: skewY(5.5deg) translateY(-6px);
 }
 
-#picture4{
-    background: linear-gradient(#3c4051, #6383b7);
-}
-
-#picture5{
-    background: linear-gradient(#f2a54a, #f6be78);
-}
-
-#picture6{
-    background: linear-gradient(#434abe, #58adcf);
+.button:hover{
+    background-color: #FCEF57;
+    color: black;
+    border-color: #FCEF57;
 }
